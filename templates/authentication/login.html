@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<p>No account?  <a href="{% url 'register' %}">Register here</a></p>
+{{ error }}
+<form method='post' action='{% url 'login' %}'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit'>
+</form>
+
+
+</body>
+</html>
